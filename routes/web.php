@@ -78,7 +78,7 @@ Route::post('tambahSupplier', [qudangController::class, 'tambahSupplier']);
 
 // LIHAT DATA =========================
 
-Route::get('dataBarang', [qudangController::class, 'lihatDataBarang']);
+Route::middleware('role:supplier')->get('dataBarang', [qudangController::class, 'lihatDataBarang']);
 
 Route::get('dataBarangSup', [qudangController::class, 'lihatDataBarangSup']);
 
